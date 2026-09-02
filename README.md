@@ -31,7 +31,7 @@ This section covers the ethical hacking and security-testing laboratories covere
 
 ### 📥 Installation Guides
 
-[💻 Kali Tools Installation Guide](./Module-06-Ethical-Hacking/Installation-Guide.md)
+[💻 Kali Tools Installation Guide](./Module-06-Ethical-Hacking/Installation-Guide/Kali-Tools.md)
 
 [🪟 Windows Tools Installation Guide](./Module-06-Ethical-Hacking/Windows-Tools-Installation-Guide.md)
 
