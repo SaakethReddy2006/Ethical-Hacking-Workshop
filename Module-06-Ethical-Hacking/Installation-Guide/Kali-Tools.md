@@ -1,5 +1,5 @@
 # 🐉 Module 06 — Ethical Hacking
-# 📥 Complete Tool Installation Guide
+# 📥 Kali Tools Installation Guide
 
 This guide contains the installation, purpose, and verification procedures for the tools prepared for **Module 06 — Ethical Hacking**.
 
