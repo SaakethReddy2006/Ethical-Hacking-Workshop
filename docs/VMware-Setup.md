@@ -93,18 +93,6 @@ VMware software availability and download locations may change — use the offic
 
 > Always obtain VM images from their official project or a trusted distribution source.
 
-## Recommended VM Resources
-
-| VM | CPU | RAM | Storage | Network |
-|---|---|---|---|---|
-| Kali Linux | 2–4 cores | 4–8 GB | 40+ GB | Host-only |
-| Windows 10 | 2–4 cores | 4–8 GB | 60+ GB | Host-only |
-| Metasploitable 2 | 1–2 cores | 1–2 GB | 10+ GB | Host-only |
-| Windows Server 2022 | 2–4+ cores | 4–8+ GB | 60+ GB | Host-only |
-| REMnux | 2–4 cores | 4–8 GB | 40+ GB | Host-only |
-
-*Adjust based on host resources — these are recommendations, not hard requirements.*
-
 ## Network Configuration
 
 The workshop uses a VMware **Host-only** network to isolate lab traffic and avoid exposing vulnerable systems externally.
@@ -137,18 +125,6 @@ Host Computer → VMware Workstation Pro → Host-only Network
                                               ├── Windows 10
                                               ├── Metasploitable 2
                                               └── Windows Server 2022
-```
-
-### IP Address Documentation
-
-Do not publish real lab IP addresses in a public repo — use placeholders:
-
-```
-<KALI-IP>
-<WINDOWS10-IP>
-<METASPLOITABLE-IP>
-<SERVER-IP>
-<REMNUX-IP>
 ```
 
 ## Basic Network Verification
