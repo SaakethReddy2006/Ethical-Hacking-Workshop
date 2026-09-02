@@ -2,18 +2,25 @@
 
 This module provides hands-on practical exercises covering common ethical hacking and penetration testing techniques in an isolated VMware laboratory environment.
 
+---
+
 ## 🖥️ Lab Environment
 
 | Machine | Role | IP Address |
 |---|---|---|
-| Kali Linux | Attacker | 192.168.153.130 |
-| Windows 10 | Windows Target | 192.168.153.129 |
-| Metasploitable 2 | Vulnerable Linux Target | 192.168.153.131 |
-| Windows Server 2022 | Active Directory Lab | DHCP / Lab Configuration |
+| Kali Linux | Attacker / Security Testing | `<KALI-IP>` |
+| Windows 10 | Windows Target | `<WINDOWS10-IP>` |
+| Metasploitable 2 | Vulnerable Linux Target | `<METASPLOITABLE-IP>` |
+| Windows Server 2022 | Active Directory Lab | `<SERVER-IP>` |
+
+> **Note:** IP addresses are represented using placeholders. Replace them with the IP addresses assigned to your own lab machines.
+
+---
 
 ## 📚 Labs
 
 ### Lab 01 — Gain Access
+
 - Responder
 - L0phtCrack
 - Exploit Sites
@@ -24,23 +31,26 @@ This module provides hands-on practical exercises covering common ethical hackin
 - Buffer Overflow
 
 ### Lab 02 — Privilege Escalation
+
 - Privilege Escalation Techniques
 - Metasploit & Meterpreter
 - pkexec
 - NFS Misconfiguration
 - UAC & Sticky Keys
-- Credential/Hash Analysis
+- Credential / Hash Analysis
 
 ### Lab 03 — Maintain Remote Access / Hide
+
 - NTFS Alternate Data Streams
 - Whitespace Steganography
 - OpenStego
-- Boot/Logon Autostart
+- Boot / Logon Autostart
 - Active Directory Persistence
 - WMI
 - Covert Channels
 
 ### Lab 04 — Clear Logs
+
 - Auditpol
 - Windows Event Log Management
 - Linux Log Management
@@ -53,9 +63,13 @@ This module provides hands-on practical exercises covering common ethical hackin
 
 Installation instructions for the tools used in Module 06.
 
-➡️ [Kali Tools](Installation-Guide/Kali-Tools.md)
+### Kali Linux
 
-➡️ [Windows Tools](Installation-Guide/Windows-Tools.md)
+➡️ [Kali Tools Installation Guide](Installation-Guide/Kali-Tools.md)
+
+### Windows
+
+➡️ [Windows Tools Installation Guide](Installation-Guide/Windows-Tools.md)
 
 ---
 
@@ -63,28 +77,38 @@ Installation instructions for the tools used in Module 06.
 
 Step-by-step demonstrations of the techniques covered during the workshop.
 
-➡️ [Demonstrations](Demonstrations/)
+➡️ [Module 06 Demonstrations](Demonstrations/)
+
+Each demonstration will contain:
+
+- 🎯 Objective
+- 🛠️ Tools Required
+- ⚙️ Lab Setup
+- 📝 Step-by-Step Procedure
+- 💻 Commands
+- 📸 Expected Results
+- ⚠️ Safety Notes
 
 ---
 
 ## 🌐 Network Setup
 
-The lab uses a VMware Host-Only network:
+The lab uses a VMware **Host-Only Network** to provide an isolated environment for the practical exercises.
 
 ```text
                 VMware Host-Only Network
-                   192.168.153.0/24
-                           │
-             ┌─────────────┼─────────────┐
-             │             │             │
-             ▼             ▼             ▼
-           Kali        Windows 10    Metasploitable 2
-       .153.130         .153.129        .153.131
-         Attacker         Target       Vulnerable Target
+                         │
+          ┌──────────────┼──────────────┐
+          │              │              │
+          ▼              ▼              ▼
+      Kali Linux     Windows 10    Metasploitable 2
+      <KALI-IP>     <WINDOWS10-IP>  <METASPLOITABLE-IP>
+       Attacker         Target       Vulnerable Target
                            │
                            ▼
-                   Windows Server 2022
-                      AD Lab Target
+                  Windows Server 2022
+                     <SERVER-IP>
+                    AD Lab Target
 
 ## ⚠️ Lab Safety
 
