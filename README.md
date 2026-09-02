@@ -1,16 +1,16 @@
 # 🔴 Ethical Hacking Workshop — Lab Documentation
 
-This repository contains the **laboratory setup, installation guides, and practical documentation for the modules handled by our team** as part of the Ethical Hacking Workshop.
+This repository contains the **laboratory setup, installation guides, and practical documentation for the modules covered by me** as part of the Ethical Hacking Workshop.
 
-The workshop consists of multiple modules, with different modules being handled by different team members.
+The overall workshop consists of multiple modules, with different modules being handled independently by different participants.
 
 ---
 
-# 📚 Modules Covered in This Repository
+# 📚 Modules Covered
 
 ## 🔴 Module 06 — Ethical Hacking
 
-This section covers the ethical hacking and security-testing laboratories handled by our team.
+This section covers the ethical hacking and security-testing laboratories covered in this repository.
 
 ### Topics Include
 
@@ -39,7 +39,7 @@ This section covers the ethical hacking and security-testing laboratories handle
 
 ## 🟣 Module 07 — Malware Analysis
 
-This section covers the malware-analysis laboratories handled by our team.
+This section covers the malware-analysis laboratories covered in this repository.
 
 ### Topics Include
 
