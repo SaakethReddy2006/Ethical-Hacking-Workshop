@@ -69,7 +69,7 @@ Installation instructions for the tools used in Module 06.
 
 ### Windows
 
-➡️ [Windows Tools Installation Guide](/Windows-Tools-Installation-Guide.md)
+➡️ [Windows Tools Installation Guide](Windows-Tools-Installation-Guide.md)
 
 ---
 
