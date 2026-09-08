@@ -1,0 +1,143 @@
+# Lab 4.3 — Linux Log Analysis
+
+## 🎯 Objective
+
+Examine Linux system and authentication logs and understand how security events are recorded.
+
+---
+
+# Part A — Display Linux Machine Logs
+
+## Step 1 — List the Log Directory
+
+On Kali:
+
+```bash
+ls -lah /var/log
+```
+
+---
+
+## Step 2 — View Recent Journal Entries
+
+```bash
+sudo journalctl -n 20
+```
+
+---
+
+## Step 3 — View SSH-Related Logs
+
+```bash
+sudo journalctl _COMM=sshd -n 20
+```
+
+This displays recent journal entries associated with the SSH daemon.
+
+---
+
+# Part B — Authentication Logs on Metasploitable 2
+
+## Step 1 — List Log Files
+
+```bash
+ls -lah /var/log
+```
+
+---
+
+## Step 2 — Examine auth.log
+
+```bash
+ls -lah /var/log/auth.log
+```
+
+---
+
+## Step 3 — View Recent Authentication Events
+
+```bash
+tail -20 /var/log/auth.log
+```
+
+---
+
+## Step 4 — Generate a Login Event
+
+Switch to the laboratory account:
+
+```bash
+su msfadmin
+```
+
+Enter the account's laboratory password.
+
+Then inspect the log:
+
+```bash
+tail -20 /var/log/auth.log
+```
+
+---
+
+## Step 5 — Search for Failed Authentication
+
+```bash
+grep -i "failed" /var/log/auth.log | tail -10
+```
+
+This can help identify failed authentication attempts.
+
+---
+
+## Step 6 — Demonstrate Log Truncation
+
+> ⚠️ Perform this only on the isolated Metasploitable 2 laboratory VM.
+
+```bash
+sudo truncate -s 0 /var/log/auth.log
+```
+
+---
+
+## Step 7 — Verify the File
+
+```bash
+ls -lah /var/log/auth.log
+```
+
+Then:
+
+```bash
+tail /var/log/auth.log
+```
+
+The file has been truncated.
+
+---
+
+## 🧹 Cleanup
+
+Because this demonstration intentionally modifies a system log, the preferred cleanup method is:
+
+```text
+Restore the Metasploitable 2 VM from its clean VMware snapshot.
+```
+
+Do not perform destructive log manipulation on production systems.
+
+---
+
+## 🧠 What You Learned
+
+Linux logs are important sources of forensic information.
+
+Authentication logs can help identify:
+
+* Successful logins
+* Failed authentication
+* SSH activity
+* User switching
+* Suspicious authentication patterns
+
+Centralized logging and log integrity controls help protect this evidence.
